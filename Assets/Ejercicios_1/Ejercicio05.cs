@@ -11,13 +11,15 @@ namespace Ejercicios_1
         // Start is called before the first frame update
         void Start()
         {
-            GameObject[] GOs = new GameObject[30];
+            
            
         }
         
         // Update is called once per frame
         void Update()
         {
+           
+            GameObject GOs = new GameObject();
 
         }
     }

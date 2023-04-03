@@ -11,10 +11,14 @@ namespace Ejercicios_1
         // Start is called before the first frame update
         void Start()
         {
-            GameObject.CreatePrimitive(PrimitiveType.Sphere);
-            Rigidbody rb = gameObject.AddComponent<Rigidbody>();
+            GameObject sphera = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            Rigidbody rb = sphera.AddComponent<Rigidbody>();
+
+            //resumida > GameObject.CreatePrimitive(PrimitiveType.Sphere).AddComponent<Rigidbody>();
+
+
         }
-        
+
         // Update is called once per frame
         void Update()
         {

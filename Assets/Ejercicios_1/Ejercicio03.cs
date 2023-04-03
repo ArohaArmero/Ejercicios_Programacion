@@ -12,9 +12,9 @@ namespace Ejercicios_1
         // Start is called before the first frame update
         void Start()
         {
-            GameObject.CreatePrimitive(PrimitiveType.Cube);
+            GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube); 
 
-            transform.localScale = Vector3.one * 2f;
+            cube.transform.localScale = Vector3.one * 2f; 
 
         }
         
