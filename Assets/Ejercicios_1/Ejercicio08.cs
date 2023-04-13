@@ -14,6 +14,16 @@ namespace Ejercicios_1
             GameObject.CreatePrimitive(PrimitiveType.Cube);
 
             //gameObject.transform.localScale = Vector3.one * 2f++;
+
+            //RECUPERRAR COMPONENTES
+            //BoxCollider box = gameObject.GetComponent<BoxCollider>();
+            //Rigidbody body = gameObject.GetComponent<Rigidbody>();
+
+            //ENCONTRAR OBJETOS EN LA ESCENA
+            //GameObject go1 = GameObject.Find("Nombre");
+            //GameObject go2 = GameObject.FindWithTag("Etiqueta");
+            //Rididbody body = GameObject.FindObjectOfType<Rigidbody>();
+            //BoxCollider[] boxes = GameObject.FindObjectsOfType<BoxCollider>()
         }
         
         // Update is called once per frame

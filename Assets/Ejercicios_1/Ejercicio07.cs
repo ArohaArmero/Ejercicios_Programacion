@@ -11,13 +11,15 @@ namespace Ejercicios_1
         // Start is called before the first frame update
         void Start()
         {
-            GameObject.CreatePrimitive(PrimitiveType.Sphere);
-            GameObject.CreatePrimitive(PrimitiveType.Sphere);
-            GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            GameObject sphera01 = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            sphera01.transform.position = Vector3.zero;
 
-            gameObject.transform.position = new Vector3(5f, 1f, -2f);
-            gameObject.transform.position = Vector3.zero;
-            gameObject.transform.position = Vector3.up * 10f;
+            GameObject sphera02 = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            sphera01.transform.position = Vector3.zero *100;
+
+            GameObject sphera03 = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            sphera01.transform.position = Vector3.zero *200;
+
 
         }
         

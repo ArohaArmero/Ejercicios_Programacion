@@ -11,21 +11,22 @@ namespace Ejercicios_1
         // Start is called before the first frame update
         void Start()
         {
-            GameObject sphera1 = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-            GameObject sphera2 = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            GameObject sphera01 = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            sphera01.transform.position = Vector3.zero;
+            //esfera01.transform.position = new Vector3(0f, 0f, 0f)
 
-            sphera1.transform.position = Vector3.forward * 100f;
-            sphera2.transform.position = Vector3.forward * 100f;
+            GameObject sphera02 = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            sphera02.transform.position = Vector3.forward * 100f;
+            //esfera02.transform.position = new Vector3(0f, 0f, 100f)
 
-            //esfera01.transform.position + new Vector3(100f, 0f, 0f)
-            //esfera01.transform.position + Vector3.righ * 100f
+
+
         }
 
         // Update is called once per frame
         void Update()
         {
-            // NO HACER new Vector3(esfera01.transform.position.x + 100f, esfera01.transform.position.y, esfera01.transform.position.z)
+
         }
-    }
 
 }

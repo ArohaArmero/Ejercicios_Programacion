@@ -8,10 +8,23 @@ namespace Ejercicios_1
     /// </summary>
     public class Ejercicio09 : MonoBehaviour
     {
+        public int numeroEsferas = 12;
+
         // Start is called before the first frame update
         void Start()
         {
-            GameObject.CreatePrimitive(PrimitiveType.Cube);
+            GameObject esferaAnterior = null;
+            for(int i = 0; i <numeroEsferas;i++)ç
+            {
+                GameObject esfera = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                if(esferaAnterior !=null)
+                {
+                    esfera.transform.localScale = esferaAnterior.transform.localScale * 2f;
+                }
+                esferaAnterior = esfera;
+            }
+
+
             GameObject.CreatePrimitive(PrimitiveType.Sphere);
 
             gameObject.transform.localScale = new Vector3(2f, 1f, 1f);
