@@ -9,20 +9,12 @@ namespace Ejercicios_1
     /// </summary>
     public class Ejercicio03 : MonoBehaviour
     {
-        // Start is called before the first frame update
         void Start()
         {
             GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube); 
 
             cube.transform.localScale = Vector3.one * 2f; 
-
-        }
-        
-        // Update is called once per frame
-        void Update()
-        {
-
+            //❕ cube.transform.localScale *= 2f;
         }
     }
-
 }

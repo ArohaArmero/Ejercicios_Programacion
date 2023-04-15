@@ -3,34 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Ejercicios_1
-{   /// <summary>
+{   
+    /// <summary>
     /// Crear un script que genere tres cubos cada uno el doble de grande que el anterior
     /// </summary>
     public class Ejercicio08 : MonoBehaviour
     {
-        // Start is called before the first frame update
         void Start()
         {
-            GameObject.CreatePrimitive(PrimitiveType.Cube);
-
-            //gameObject.transform.localScale = Vector3.one * 2f++;
-
-            //RECUPERRAR COMPONENTES
-            //BoxCollider box = gameObject.GetComponent<BoxCollider>();
-            //Rigidbody body = gameObject.GetComponent<Rigidbody>();
-
-            //ENCONTRAR OBJETOS EN LA ESCENA
-            //GameObject go1 = GameObject.Find("Nombre");
-            //GameObject go2 = GameObject.FindWithTag("Etiqueta");
-            //Rididbody body = GameObject.FindObjectOfType<Rigidbody>();
-            //BoxCollider[] boxes = GameObject.FindObjectsOfType<BoxCollider>()
+            CrearFiguras(PrimitiveType.Cube, 3);
         }
-        
-        // Update is called once per frame
-        void Update()
+
+        public static void CrearFiguras(PrimitiveType figura, int cantidad, float separacion = 0f)
         {
-
-        }
+            float x = -0.5f; //Para que el primero se dibuje en (0, 0, 0)
+            for (int i = 0; i < cantidad; i++)
+            {
+                GameObject go = GameObject.CreatePrimitive(figura);
+                float size = Mathf.Pow(2f, i); //1, 2, 4, 8, 16
+                go.transform.localScale = Vector3.one * size;
+                x += size/2f; //Empujamos el punto de creación la mitad del tamaño que tiene
+                go.transform.position = new Vector3(x, 0f, 0f);
+                x += size/2f; //Empujamos la otra mitad para retomar desde ahí en el próximo
+                x += separacion; //Añadimos la separación que queremos entre cubos
+            }
+        }  
     }
-
 }
